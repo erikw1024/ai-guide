@@ -135,6 +135,7 @@
         el.src=el.getAttribute('data-fallback');
         const badge=el.closest('.rv-official')?.querySelector('.rv-verified');
         if(badge)badge.textContent='OFFICIAL IMAGE UNAVAILABLE · DIAGRAM SHOWN';
+        el.closest('.rv-official-image')?.querySelector('.rv-pin')?.remove();
       });
     });
   }
