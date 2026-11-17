@@ -33,7 +33,7 @@
     tasks:'plugins',work:'projects',safety:'privacy',creative:'documents'
   };
   const escape=s=>String(s).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[ch]));
-  const lessonLinks=g=>g.lessons.map((id,i)=>'<a class="visual-lesson-link" href="#lesson/'+escape(id)+'">Lesson '+(i+1)+': '+escape((window.LESSONS||[]).find(l=>l.id===id)?.title||id)+' →</a>').join('');
+  const lessonLinks=g=>g.lessons.map((id,i)=>'<a class="visual-lesson-link" href="#lesson/'+escape(id)+'">Lesson '+(i+1)+': '+escape((typeof LESSONS!=='undefined'?LESSONS:[]).find(l=>l.id===id)?.title||id)+' →</a>').join('');
   function displayGuide(g,compact) {
     const fig='<figure class="visual-figure"><img src="'+escape(g.image)+'" alt="'+escape(g.summary)+'" width="1200" height="720" loading="'+(compact?'lazy':'eager')+'" /><figcaption>Illustrative interface diagram, not an actual ChatGPT screenshot. Labels and layout may vary across devices and accounts.</figcaption></figure>';
     if(compact) return '<section class="visual-lesson" aria-label="Visual walkthrough"><div class="visual-lesson-heading"><div><div class="eyebrow">SEE IT IN PICTURES</div><h2>'+escape(g.title)+'</h2><p class="muted">'+escape(g.summary)+'</p></div><a class="btn btn-outline" href="#visual-guide/'+escape(g.id)+'">Full visual guide →</a></div>'+fig+'<a class="subtle-link" href="'+escape(g.official)+'" target="_blank" rel="noopener noreferrer">See official OpenAI instructions ↗</a></section>';
