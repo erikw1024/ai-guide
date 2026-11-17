@@ -72,3 +72,11 @@
 @media(max-width:780px){.pa-lesson-shell,.pa-templates,.pa-stages{grid-template-columns:1fr}.pa-lesson-rail{display:none}.pa-visual-grid{grid-template-columns:1fr 1fr}.pa-heading{border-radius:17px}.pa-heading h1{font-size:1.9rem}}
 @media(max-width:580px){.pa-visual-grid{grid-template-columns:1fr}.pa-process-head{align-items:flex-start}.pa-progress{display:block}.pa-meter{margin:12px 0}.pa-template-box{padding:14px}.pa-lesson-shell{display:block}}
 @media print{.pa-lesson-rail,.pa-buttons,.pa-switch,.pa-templates button,.pa-toast{display:none!important}.pa-process,.pa-check{break-inside:avoid}.pa-image{break-inside:avoid}}
+
+/* Screenshot callouts point at genuine OpenAI interface controls. */
+.pa-real-frame{position:relative;display:block;overflow:hidden;background:#fff}
+.pa-real-frame img{width:100%;display:block;max-height:320px;object-fit:contain}
+.pa-real-pin{position:absolute;display:grid;place-items:center;background:#DB7957;color:#fff;border:3px solid #fff;box-shadow:0 3px 12px #243e4770;border-radius:50%;width:37px;height:37px;font-size:1rem;font-weight:850;transform:translate(-50%,-50%);pointer-events:none}
+.pa-pin-create{left:13%;top:18%}.pa-pin-settings{left:90%;top:24%}.pa-pin-workspace{left:82%;top:17%}
+.pa-shot figcaption strong{color:#305c5d}
+@media(max-width:580px){.pa-real-pin{width:30px;height:30px;font-size:.9rem}}
