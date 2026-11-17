@@ -16,6 +16,8 @@
 </style>
   <link rel="stylesheet" href="visual-guide.css" />
   <link rel="stylesheet" href="visual-expansion.css" />
+  <link rel="stylesheet" href="projects-academy.css" />
+  <link rel="stylesheet" href="prompt-library.css" />
 </head>
 <body>
   <a href="#content" class="skip">Skip to main content</a>
@@ -33,6 +35,8 @@
         <a href="#visual-guide" data-nav="visual-guide"><span class="nav-symbol">▧</span> Picture guides</a>
         <a href="#capabilities" data-nav="capabilities"><span class="nav-symbol">▦</span> Capabilities</a>
         <a href="#use-cases" data-nav="use-cases"><span class="nav-symbol">✦</span> Everyday examples</a>
+        <a href="#project-setup" data-nav="project-setup"><span class="nav-symbol">▣</span> Set up Projects</a>
+        <a href="#prompt-library" data-nav="prompt-library"><span class="nav-symbol">❖</span> Prompt library</a>
         <a href="#prompt-lab" data-nav="prompt-lab"><span class="nav-symbol">⌘</span> Prompt workshop</a>
         <a href="#quick-reference" data-nav="quick-reference"><span class="nav-symbol">▤</span> Quick reference</a>
         <a href="#safety" data-nav="safety"><span class="nav-symbol">♧</span> Safety & privacy</a>
@@ -189,7 +193,7 @@ function updateGlobal(){
 }
 function renderHome(){
  const resume=nextLesson(),pct=progress(),count=asArray(state.completed).length;
- return `<section class="hero"><div><div class="eyebrow">Welcome, Robert</div><h1>A little more confident with AI, every day.</h1><p>Learn how to use ChatGPT for the things you already do: building matters, household paperwork, news, health research, Spanish, guitar and more.</p><div class="hero-buttons"><a class="btn btn-primary" href="#lesson/${resume.id}">${count?'Continue learning':'Start your first lesson'} →</a><a class="btn btn-outline" href="#capabilities">Explore the capabilities</a></div></div><div class="hero-art" aria-hidden="true"><div class="orbit"><div class="orbit-core">R</div><span class="orbit-dot one">✎</span><span class="orbit-dot two">◎</span><span class="orbit-dot three">✳</span></div></div></section>
+ return `<section class="hero"><div><div class="eyebrow">Welcome, Robert</div><h1>A little more confident with AI, every day.</h1><p>Learn how to use ChatGPT for the things you already do: building matters, household paperwork, news, health research, Spanish, guitar and more.</p><div class="hero-buttons"><a class="btn btn-primary" href="#lesson/${resume.id}">${count?'Continue learning':'Start your first lesson'} →</a><a class="btn btn-outline" href="#capabilities">Explore the capabilities</a><a class="btn btn-outline" href="#project-setup">Set up Projects</a><a class="btn btn-outline" href="#prompt-library">Explore 75 prompts</a></div></div><div class="hero-art" aria-hidden="true"><div class="orbit"><div class="orbit-core">R</div><span class="orbit-dot one">✎</span><span class="orbit-dot two">◎</span><span class="orbit-dot three">✳</span></div></div></section>
  <section class="stat-row" aria-label="Learning progress"><div class="stat"><strong>${pct}%</strong><span>of the course completed</span></div><div class="stat"><strong>${count}<span style="display:inline;font-size:1.1rem;color:#87969e"> / ${LESSONS.length}</span></strong><span>practical lessons finished</span></div><div class="stat"><strong>${asArray(state.bookmarks).length}</strong><span>lessons bookmarked</span></div></section>
  <div class="section-top"><div><div class="eyebrow">Begin here</div><h2>Your next small step</h2><p class="muted">A useful exercise, designed to be completed at your pace.</p></div><a class="subtle-link" href="#pathway">View all lessons →</a></div>
  <section class="two-col"><div class="panel panel-highlight"><div class="row">${tag('RECOMMENDED NEXT')}${tag(`${resume.mins} min`,'blue')}</div><h2 style="margin-top:14px">${esc(resume.title)}</h2><p>${esc(resume.goal)}</p><a href="#lesson/${resume.id}" class="btn btn-primary">Open lesson →</a></div><div class="panel"><h3>How this guide works</h3><div class="numbered"><div><span><strong>Learn</strong> one capability with simple instructions.</span></div><div><span><strong>Try</strong> a real prompt in ChatGPT.</span></div><div><span><strong>Check</strong> the result and mark the lesson complete.</span></div></div></div></section>
@@ -317,5 +321,8 @@ render();
 </script>
   <script src="visual-guide.js"></script>
   <script src="visual-expansion.js"></script>
+  <script src="projects-academy.js"></script>
+  <script src="prompt-catalogue.js"></script>
+  <script src="prompt-library.js"></script>
 </body>
 </html>
