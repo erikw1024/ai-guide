@@ -152,6 +152,7 @@
       '</section>';
   }
   function enrichLesson(root,id){
+    root.querySelector('.visual-lesson')?.remove();
     const l=(typeof LESSONS!=='undefined'?LESSONS:[]).find(x=>x.id===id);
     if(!l)return;
     const head=root.querySelector('.page-heading');
@@ -167,6 +168,7 @@
     });
   }
   function enrichCapability(root,id){
+    root.querySelector('.visual-lesson')?.remove();
     const c=(typeof CAPABILITIES!=='undefined'?CAPABILITIES:[]).find(x=>x.id===id);
     if(!c)return;
     const [guide,topic]=capMap[id]||['conversation','workflow'];
