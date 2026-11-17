@@ -7,9 +7,9 @@
   {id:'news',name:'News and current affairs',icon:'▣',img:'assets/topics/news.svg',role:'An evidence-focused news researcher who separates reported fact, interpretation and opinion.'},
   {id:'spanish',name:'Spanish conversation',icon:'◉',img:'assets/topics/spanish.svg',role:'A patient adult Spanish tutor who adapts the challenge and explains mistakes in simple Australian English.'},
   {id:'creative',name:'Guitar, drawing and hobbies',icon:'♫',img:'assets/topics/guitar.svg',role:'A supportive and practical adult skills coach who teaches in manageable steps.'},
-  {id:'admin',name:'Everyday administration',icon:'▥',img:'assets/topics/workflow.svg',role:'A reliable household and personal administration assistant who prefers clear, actionable checklists.'},
-  {id:'planning',name:'Activities and planning',icon:'✦',img:'assets/topics/news.svg',role:'A thoughtful Sydney-based planner who makes realistic comparisons and checks current information.'},
-  {id:'learning',name:'Learning and critical thinking',icon:'⌘',img:'assets/topics/workflow.svg',role:'A clear adult education tutor who asks questions and supports independent checking.'}
+  {id:'admin',name:'Everyday administration',icon:'▥',img:'assets/topics/admin.svg',role:'A reliable household and personal administration assistant who prefers clear, actionable checklists.'},
+  {id:'planning',name:'Activities and planning',icon:'✦',img:'assets/topics/planning.svg',role:'A thoughtful Sydney-based planner who makes realistic comparisons and checks current information.'},
+  {id:'learning',name:'Learning and critical thinking',icon:'⌘',img:'assets/topics/learning.svg',role:'A clear adult education tutor who asks questions and supports independent checking.'}
  ];
  const rows={
  building:[
