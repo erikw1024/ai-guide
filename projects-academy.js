@@ -105,7 +105,7 @@ Explain in Australian English and avoid long lectures.`}
   const save=()=>{try{localStorage.setItem(key,JSON.stringify(saved))}catch(e){}};
   const link=(id,label)=>`<a href="#project-setup/${id}">${E(label)}</a>`;
   const image=(name,caption)=>`<figure class="pa-image"><img src="assets/projects/${E(name)}.svg" alt="${E(caption)}" loading="lazy" width="1200" height="700"/><figcaption>Illustrated example: ${E(caption)}</figcaption></figure>`;
-  const shot=key=>!shots[key]?'':`<figure class="pa-shot"><div class="pa-source-label">GENUINE OPENAI SCREENSHOT</div><img src="${E(shots[key])}" alt="Screenshot of ${E(key)} in ChatGPT Projects" loading="lazy" referrerpolicy="no-referrer" data-fallback="assets/projects/project-structure.svg"/><figcaption>See the control in the real ChatGPT interface. <a href="${root}" target="_blank" rel="noopener noreferrer">Official source ↗</a> (your screen may differ).</figcaption></figure>`;
+  const shot=key=>!shots[key]?'':`<figure class="pa-shot"><div class="pa-source-label">GENUINE OPENAI SCREENSHOT</div><div class="pa-real-frame"><img src="${E(shots[key])}" alt="Screenshot of ${E(key)} in ChatGPT Projects" loading="lazy" referrerpolicy="no-referrer" data-fallback="assets/projects/project-structure.svg"/><span aria-hidden="true" class="pa-real-pin pa-pin-${E(key)}">1</span></div><figcaption><strong>1. ${E(({create:'Select New project from the sidebar.',settings:'Open the Project menu and select Project settings.',workspace:'Find reference files and related chats in this Project.'})[key])}</strong> Compare with the real ChatGPT interface. <a href="${root}" target="_blank" rel="noopener noreferrer">Official source ↗</a> (your screen may differ).</figcaption></figure>`;
   const h=()=>`<div class="pa-heading"><div class="pa-kicker">ROBERT'S CHATGPT COURSE · PRACTICAL TUTORIAL</div><h1>Set up Projects, step by step</h1><p>Learn where to click, what instructions to use, which files to add and how to organise recurring work. Follow each step on your own device.</p><div class="pa-buttons"><a class="btn btn-primary" href="#project-setup/${(content.find(c=>!isDone(c.id))||content[0]).id}">Continue the tutorial →</a><a class="btn btn-outline" href="#project-setup/templates">Copy Project instructions →</a></div></div>`;
   function overview(){
     const completed=content.filter(c=>isDone(c.id)).length;
@@ -127,7 +127,7 @@ Explain in Australian English and avoid long lectures.`}
     for(const img of target.querySelectorAll('img[data-fallback]'))img.addEventListener('error',()=>{
       if(img.dataset.fallen)return;img.dataset.fallen='1';img.src=img.dataset.fallback;
       const l=img.closest('.pa-shot')?.querySelector('.pa-source-label');
-      if(l)l.textContent='OFFICIAL IMAGE NOT AVAILABLE · DIAGRAM SHOWN';
+      if(l)l.textContent='OFFICIAL IMAGE NOT AVAILABLE · DIAGRAM SHOWN';img.closest('.pa-shot')?.querySelector('.pa-real-pin')?.remove();
     });
     document.querySelector('#sidebar')?.classList.remove('open');
     document.querySelector('#menu-toggle')?.setAttribute('aria-expanded','false');
