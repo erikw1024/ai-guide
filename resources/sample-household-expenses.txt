@@ -1,0 +1,22 @@
+PRACTICE DOCUMENT - FICTIONAL HOUSEHOLD EXPENSES
+All figures are invented for learning. They are not Robert's actual finances.
+
+Category | October 2026 AUD | November 2026 AUD
+Groceries | 790.00 | 845.00
+Electricity | 180.00 | 216.00
+Gas | 78.00 | 72.00
+Internet | 89.00 | 89.00
+Transport | 370.00 | 428.00
+Home insurance | 214.00 | 214.00
+Entertainment | 135.00 | 161.00
+Pharmacy | 42.00 | 56.00
+Garden maintenance | 120.00 | 0.00
+
+Task suggestions:
+1. Recalculate totals for both months (do not trust an AI total without checking).
+2. Calculate each category's dollar and percentage change.
+3. Distinguish recurring changes from one-off costs.
+4. Identify any categories requiring more information.
+5. Explain what can and cannot be concluded from two months of expenses.
+
+END OF FICTIONAL TRAINING DOCUMENT
