@@ -80,3 +80,14 @@
 .pa-pin-create{left:13%;top:18%}.pa-pin-settings{left:90%;top:24%}.pa-pin-workspace{left:82%;top:17%}
 .pa-shot figcaption strong{color:#305c5d}
 @media(max-width:580px){.pa-real-pin{width:30px;height:30px;font-size:.9rem}}
+
+.pa-overview-screens{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:22px 0}
+.pa-overview-screens .pa-shot{min-width:0}
+.pa-overview-screens .pa-shot img{max-height:180px;object-fit:contain}
+.pa-overview-screens .pa-shot figcaption{font-size:.73rem}
+.pa-practice-downloads{background:#f5f9f7;border:1px solid #cfe5dc;border-radius:14px;padding:17px 20px;margin-bottom:22px}
+.pa-practice-downloads strong{color:#0a655f}
+.pa-practice-downloads p{font-size:.81rem;color:#5c737b;margin:5px 0 13px}
+.pa-practice-downloads>div{display:flex;flex-wrap:wrap;gap:8px}
+@media(max-width:850px){.pa-overview-screens{grid-template-columns:1fr 1fr}.pa-overview-screens .pa-shot:last-child{grid-column:1/-1}}
+@media(max-width:500px){.pa-overview-screens{grid-template-columns:1fr}.pa-overview-screens .pa-shot:last-child{grid-column:auto}.pa-practice-downloads .btn{width:100%}}
